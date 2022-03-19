@@ -89,7 +89,7 @@ async def handler(websocket):
 async def main(host):
     loop = asyncio.get_running_loop()
     stop = loop.create_future()
-    #loop.add_signal_handler(signal.SIGTERM, stop.set_result, None)
+    loop.add_signal_handler(signal.SIGTERM, stop.set_result, None)
     port = int(os.environ.get("PORT", "8081"))
     async with websockets.serve(handler, host, port):
         await asyncio.Future()  # run forever
