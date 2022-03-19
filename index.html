@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <title>Web Chat</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="backend.js" type="text/javascript"></script>
+</head>
+<body>
+
+<dialog id="favDialog">
+    <form method="dialog">
+        <section>
+            <p><label>Name:</label>
+            <div class="form__group field">
+                <input type="input" class="form__field" placeholder="Введите имя" name="name" id='name' required />
+            </div>
+        </section>
+    </form>
+</dialog>
+<dialog id="welcomeDialog">
+    <form method="dialog">
+        <section>
+            <p><label>Добро пожаловать на сервер "Шизофрения"!</label>
+            <div class="form__group field">
+                <input type="input" class="form__field" placeholder="Введите имя" name="name" id='join_name' required />
+            </div>
+        </section>
+    </form>
+</dialog>
+<div class="messages">
+    <p style="color: #a807a3; text-align: center;">Добро пожаловать на сервер "Шизофрения"</p>
+    <ul id="messages">
+        <li style="text-align: center;">Добро пожаловать в чат!</li>
+    </ul>
+
+    <div class="form__group field">
+        <input type="input" class="form__field" placeholder="Message" name="name" id='message' required />
+    </div>
+</div>
+<div class="users">
+    <button id="updateDetails">Update Nickname</button>
+    <p>Users:</p>
+    <ul id="users">
+        <li>You</li>
+    </ul>
+</div>
+</body>
+</html>

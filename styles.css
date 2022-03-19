@@ -1,0 +1,114 @@
+ul#messages { overflow: auto;  height: 86% ; margin: 1em 0; padding: 0 3px; list-style: none;}
+ul#messages li { margin: 0.35em 0; padding: 0; }
+ul#messages border {
+            font-family: "Trebuchet MS", "Lucida Sans";
+            padding: 7px 20px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border-left: 10px solid #f05d22;
+            box-shadow: 2px -2px 5px 0 rgba(0,0,0,.1),
+                 -2px -2px 5px 0 rgba(0,0,0,.1),
+                2px 2px 5px 0 rgba(0,0,0,.1),
+                -2px 2px 5px 0 rgba(0,0,0,.1);
+            font-size: 20px;
+            letter-spacing: 2px;
+            transition: 0.3s all linear;
+            }
+ul#messages li small { display: block; font-size: 0.59em; color: gray; }
+ul#messages li.pending { color: #aaa; }
+
+$secondary: #11998e;
+$primary: #38ef7d;
+$white: #bbb;
+$gray: #9b9b9b;
+
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 2;
+  border-bottom: 2px solid $gray;
+  outline: 0;
+  font-size: 1.3rem;
+  color: $white;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: $gray;
+}
+
+.form__field:focus {
+  ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: $primary;
+    font-weight:700;
+  }
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, $primary,$secondary);
+  border-image-slice: 1;
+}
+/* reset input */
+.form__field{
+  &:required,&:invalid { box-shadow:none; }
+}
+/* demo */
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: flow;
+  min-height: 100vh;
+  font-size: 1.5rem;
+  background-color:#22222200;
+}
+
+.messages{
+    margin: 10px;
+    width: 80%;
+    height: 23em;
+}
+p{
+    margin:0px;
+}
+ul{
+    margin:0px;
+}
+.users{
+    height: 25em;
+    display: flex;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 20%;
+}
