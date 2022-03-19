@@ -3,7 +3,7 @@ let ViewName = ""
 
 
 function getWebSocketServer() {
-  if (window.location.host === onraptor.github.io") {
+  if (window.location.host === "onraptor.github.io") {
     return "wss://webchatttt.herokuapp.com/";
   } else if (window.location.host === "localhost:8081") {
     return "ws://localhost:8001/";
